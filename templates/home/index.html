@@ -29,44 +29,42 @@
 
     {% block content %}
         <!-- Your index content goes here -->
-    <!-- NAVBAR -->
+ <!-- NAVBAR -->
 
-    <header id="myDiv" class="header">
-<nav>
-    <a href="/" class="logo">
-        <img id="logo" src="{% static 'images/Coolhome.svg' %}" alt="" width="220">
-        <img id="scrolledLogo" src="{% static 'images/coolhomebl.svg' %}" alt="" width="220" style="display: none;">
-    </a>
-
-    <ul class="nav-ul">
-<div class="nav-links">
-<li><a href="">Home</a></li>
-<li><a href="">Properties</a></li>
-<li><a href="">Rent</a></li>
-<li><a href="">Buy</a></li>
-<li><a href="">Blog</a></li>
-<li><a href="">About</a></li>
-<li><a href="">Faq</a></li>
-<li><a href="">Contact</a></li>
-</div>
-<div class="navbar-btn" style="display: flex;justify-content: center;align-items: center;gap: 1.6em;">
-    <li><a href="">Login</a></li>
-    <a href="">
-    <button>Free Quote</button>
-</a>
-</div>
-<div class="humberger">
-    <i class="fa-solid fa-bars"></i>
-    <!-- <i class="fa-solid fa-xmark"></i> -->
-</div>
-
-    </ul>
-</nav>
-
+<header id="myDiv" class="header">
+    <nav>
+        <a href="/" class="logo">
+            <img id="logo" src="{% static 'images/Coolhome.svg' %}" alt="" width="220">
+            <img id="scrolledLogo" src="{% static 'images/coolhomebl.svg' %}" alt="" width="220" style="display: none;">
+        </a>
+    
+        <ul class="nav-ul">
+            <div class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="{% url 'listings:listings_list' %}">Properties</a></li>
+                <li><a href="#">Rent</a></li>
+                <li><a href="#">Buy</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Faq</a></li>
+                <li><a href="#">Contact</a></li>
+            </div>
+            <div class="navbar-btn" style="display: flex;justify-content: center;align-items: center;gap: 1.6em;">
+                <li><a href="#">Login</a></li>
+                <a href="#">
+                    <button>Free Quote</button>
+                </a>
+            </div>
+            <div class="humberger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </ul>
+    </nav>
     </header>
-
+    
     <!-- NAVBAR END -->
-
+       
+    
     <!-- HERO START -->
 <section class="hero">
     <div class="hero-bg-lnes">
