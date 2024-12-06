@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Property Listings</h1>
+<a href="{% url 'listings:listing_create' %}">Add New Listing</a>
+<!-- Display all property listings -->
+<ul>
+    {% for listing in listings %}
+        <li>
+            <a href="{% url 'listings:listing_detail' listing.id %}">{{ listing.title }}</a>  <!-- Link to detailed view -->
+            <p>{{ listing.description }}</p>
+            <a href="{% url 'listings:listing_update' listing.id %}">Edit</a>  <!-- Link to update view -->
+            <a href="{% url 'listings:listing_delete' listing.id %}">Delete</a>  <!-- Link to delete view -->
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

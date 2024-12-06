@@ -22,7 +22,7 @@ from django.conf.urls.static import static # Import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='home/index.html'), name='home'),  # Serve index.html at the root URL
+    path('', TemplateView.as_view(template_name='home/index.html'), name='home'), # Home page # Serve index.html at the root URL
     path('listings/', include('listings.urls')),
     path('users/', include('users.urls'))
 ] + static (settings.MEDIA_URL, document_root =settings.MEDIA_ROOT) #go to settings.py

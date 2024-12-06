@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.contrib.auth import login, authenticate
+from django.shortcuts import render, redirect
+from django.contrib.auth import login,authenticate
 from .forms import CustomUserCreationForm
 
 def register(request):
@@ -8,7 +8,7 @@ def register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('dashboard')
+            return redirect('dashboard') # Redirect to dashboard after successful registration
     else:
         form = CustomUserCreationForm()
     return render(request, 'registration/register.html', {'form': form})

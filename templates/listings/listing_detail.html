@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Display detailed information for a single property listing -->
+<h1>{{ listing.title }}</h1>
+<p>{{ listing.description }}</p>
+<p>Price: {{ listing.price }}</p>
+<p>Location: {{ listing.location }}</p>
+<p>Type: {{ listing.property_type }}</p>
+<p>Amenities: {{ listing.amenities }}</p>
+<p>Bedrooms: {{ listing.num_bedrooms }}</p>
+<p>Bathrooms: {{ listing.num_bathrooms }}</p>
+<p>Square Footage: {{ listing.square_footage }}</p>
+{% if listing.image %}
+    <img src="{{ listing.image.url }}" alt="{{ listing.title }}">
+{% endif %}
+{% if listing.video %}
+    <video controls>
+        <source src="{{ listing.video.url }}" type="video/mp4">
+    </video>
+{% endif %}
+{% if listing.virtual_tour_url %}
+    <a href="{{ listing.virtual_tour_url }}" target="_blank">Virtual Tour</a>
+{% endif %}
+{% endblock %}
