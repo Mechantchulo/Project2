@@ -1,17 +1,35 @@
 {% extends 'base.html' %}
 
+{% block title %}Property Listings{% endblock %}
+
 {% block content %}
-<h1>Property Listings</h1>
-<a href="{% url 'listings:listing_create' %}">Add New Listing</a>
+<h2>Property Listings</h2>
+<a href="{% url 'listings:listing_create' %}" class="btn btn-primary">Create New Listing</a>
 <!-- Display all property listings -->
-<ul>
-    {% for listing in listings %}
-        <li>
-            <a href="{% url 'listings:listing_detail' listing.id %}">{{ listing.title }}</a>  <!-- Link to detailed view -->
-            <p>{{ listing.description }}</p>
-            <a href="{% url 'listings:listing_update' listing.id %}">Edit</a>  <!-- Link to update view -->
-            <a href="{% url 'listings:listing_delete' listing.id %}">Delete</a>  <!-- Link to delete view -->
-        </li>
-    {% endfor %}
-</ul>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for listing in listings %}
+        <tr>
+            <td><a href="{% url 'listings:listing_detail' listing.id %}">{{ listing.title }}</a></td>
+            <td>{{ listing.description }}</td>
+            <td>{{ listing.price }}</td>
+            <td>
+                <a href="{% url 'listings:listing_update' listing.id %}" class="btn btn-warning">Edit</a>
+                <form method="post" action="{% url 'listings:listing_delete' listing.id %}" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 {% endblock %}
