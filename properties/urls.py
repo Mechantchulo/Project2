@@ -15,9 +15,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.views.generic import TemplateView # Import TemplateView
+from django.conf import settings # Import settings 
+from django.conf.urls.static import static # Import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='home/index.html'), name='home'),  # Serve index.html at the root URL
-]
+    path('', TemplateView.as_view(template_name='home/index.html'), name='home'), # Home page # Serve index.html at the root URL
+    path('listings/', include('listings.urls')),
+    path('users/', include('users.urls'))
+] + static (settings.MEDIA_URL, document_root =settings.MEDIA_ROOT) #go to settings.py
+
+# Add this line to serve media files during development 
+# if settings.DEBUG: urlpatterns +=
+# if settings.DEBUG: 
+#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

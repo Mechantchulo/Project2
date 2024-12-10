@@ -1,0 +1,56 @@
+property_management/
+│
+├── property_management/          # Main project folder
+│   ├── __init__.py
+│   ├── settings.py               # Project settings
+│   ├── urls.py                   # Project URL configuration
+│   ├── wsgi.py                   # WSGI configuration
+│   └── asgi.py                   # ASGI configuration (if needed)
+│
+├── users/                        # Users app
+│   ├── migrations/               # Migration files
+│   ├── __init__.py
+│   ├── admin.py                  # Admin configuration
+│   ├── apps.py                   # App configuration
+│   ├── models.py                 # User model
+│   ├── forms.py                  # User forms
+│   ├── views.py                  # User views
+│   └── urls.py                   # User URLs
+│
+├── listings/                     # Listings app
+│   ├── migrations/               # Migration files
+│   ├── __init__.py
+│   ├── admin.py                  # Admin configuration
+│   ├── apps.py                   # App configuration
+│   ├── models.py                 # Property listing model
+│   ├── forms.py                  # Property listing forms
+│   ├── views.py                  # Property listing views
+│   └── urls.py                   # Listings URLs
+│
+├── dashboard/                    # Dashboard app
+│   ├── migrations/               # Migration files
+│   ├── __init__.py
+│   ├── admin.py                  # Admin configuration
+│   ├── apps.py                   # App configuration
+│   ├── views.py                  # Dashboard views
+│   └── urls.py                   # Dashboard URLs
+│
+├── templates/                    # Global templates folder
+│   ├── base.html                 # Base template
+│   ├── registration/             # Registration templates
+│   │   └── register.html         # Registration page
+│   ├── listings/                 # Listings templates
+│   │   ├── listing_form.html      # Create/Update listing form
+│   │   ├── listing_list.html      # Listings list page
+│   │   └── listing_confirm_delete.html  # Confirmation for deletion
+│   └── dashboard/                # Dashboard templates
+│       ├── admin_dashboard.html   # Admin dashboard
+│       ├── realtor_dashboard.html  # Realtor dashboard
+│       └── user_dashboard.html     # User dashboard
+│
+├── static/                       # Static files (CSS, JS, images)
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+└── manage.py                     # Django management script
