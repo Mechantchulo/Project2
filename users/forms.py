@@ -1,5 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
+from allauth.account.forms import LoginForm, SignupForm
 from .models import CustomUser 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -7,10 +8,6 @@ class CustomUserCreationForm(UserCreationForm):
         model = CustomUser 
         fields = ('username', 'email', 'password1', 'password2', 'role')
 
-
-# users/forms.py
-from django import forms
-from allauth.account.forms import LoginForm, SignupForm
 
 class CustomLoginForm(LoginForm):
     def __init__(self, *args, **kwargs):
