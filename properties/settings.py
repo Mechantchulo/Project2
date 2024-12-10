@@ -31,33 +31,42 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # Django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'dashboard',
-    'listings',
-    'users',
     'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
+
+    # Third-party apps
+    'allauth', #Required by django-allauth
+    'allauth.account', #Handles user accounts
+    'allauth.socialaccount', #Enables social media account login
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.instagram',
-]
 
-SITE_ID = 1
+    #My apps
+    'dashboard',
+    'listings',
+    'users',
+
+]
 
 AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
+    'django.contrib.auth.backends.ModelBackend', # Default authentication
+    'allauth.account.auth_backends.AuthenticationBackend', # Allauth backend
 ]
 
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+SITE_ID = 1  # Required for django-allauth to work
+
+LOGIN_REDIRECT_URL = '/' # Redirects to home after login
+LOGOUT_REDIRECT_URL = '/' # Redirects to home after logout
+ACCOUNT_AUTHENTICATION_METHOD = 'username' # Authentication by username
+ACCOUNT_EMAIL_REQUIRED = True # Email is mandatory
+ACCOUNT_EMAIL_VERIFICATION = 'optional' # Email verification is optional
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
