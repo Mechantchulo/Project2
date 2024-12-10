@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login,authenticate
 from .forms import CustomUserCreationForm
+from django.contrib.auth.views import PasswordChangeView
+from django.urls import reverse_lazy
 
 def register(request):
     if request.method == 'POST':
@@ -12,3 +14,9 @@ def register(request):
     else:
         form = CustomUserCreationForm()
     return render(request, 'registration/register.html', {'form': form})
+
+
+
+class CustomPasswordChangeView(PasswordChangeView):
+    success_url = reverse_lazy('account_change_password_done') # URL to redirect to after a successful password change
+    template_name = 'account/password_change.html'
