@@ -68,6 +68,13 @@ ACCOUNT_AUTHENTICATION_METHOD = 'username' # Authentication by username
 ACCOUNT_EMAIL_REQUIRED = True # Email is mandatory
 ACCOUNT_EMAIL_VERIFICATION = 'optional' # Email verification is optional
 
+ACCOUNT_FORMS = {
+    'login': 'users.forms.CustomLoginForm',
+    'signup': 'users.forms.CustomSignupForm',
+}
+
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
