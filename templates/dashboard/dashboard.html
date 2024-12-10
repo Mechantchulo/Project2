@@ -1,10 +1,68 @@
 {% extends 'base.html' %}
 
+{% block title %}Dashboard{% endblock %}
+
 {% block content %}
-  <h1>Dashboard</h1>
-  <ul>
-    {% for item in data %}
-      <li>{{ item.name }}: {{ item.value }}</li>
-    {% endfor %}
-  </ul>
+<div class="container">
+    <h1 class="mt-5">Dashboard</h1>
+
+    <!-- General Data Section -->
+    <h2>General Data</h2>
+    <ul>
+        {% for item in data %}
+            <li>{{ item.name }}: {{ item.value }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- User-Specific Section -->
+    <h2>User Dashboard</h2>
+    <p>Welcome to your dashboard!</p>
+    <!-- Additional user-specific features can be added here -->
+
+    <!-- Properties Table -->
+    <h2>Properties</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Created At</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for property in properties %}
+            <tr>
+                <td>{{ property.title }}</td>
+                <td>{{ property.description }}</td>
+                <td>${{ property.price }}</td>
+                <td>{{ property.created_at }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Inquiries Table -->
+    <h2>Inquiries</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>User Email</th>
+                <th>Message</th>
+                <th>Created At</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for inquiry in inquiries %}
+            <tr>
+                <td>{{ inquiry.property.title }}</td>
+                <td>{{ inquiry.user_email }}</td>
+                <td>{{ inquiry.message }}</td>
+                <td>{{ inquiry.created_at }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 {% endblock %}
