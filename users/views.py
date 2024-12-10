@@ -18,5 +18,5 @@ def register(request):
 
 
 class CustomPasswordChangeView(PasswordChangeView):
-    success_url = reverse_lazy('account_change_password_done')
+    success_url = reverse_lazy('account_change_password_done') # URL to redirect to after a successful password change
     template_name = 'account/password_change.html'
