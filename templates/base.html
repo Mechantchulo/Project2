@@ -3,36 +3,58 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>{% block title %}Haven Heights{% endblock %}</title> 
-    <!-- Base CSS and JS --> 
-    <link rel="stylesheet" href="{% static 'style/css/main.css' %}"> 
-    <link rel="stylesheet" href="{% static 'style/css/Responsive.css' %}"> 
-    <link rel="shortcut icon" href="{% static 'images/brainwave-symbol.svg' %}" type="image/x-icon"> 
-    
-    <!-- GOOGLE FONTS --> 
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet"> 
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-    <!-- FONTS AWESOME --> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
-    
-    {% block head %} 
-        <!-- Placeholder for additional head elements --> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Haven Heights{% endblock %}</title>
+    <!-- Base CSS and JS -->
+    <link rel="stylesheet" href="{% static 'style/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'style/css/Responsive.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/brainwave-symbol.svg' %}" type="image/x-icon">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- FONTS AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    {% block head %}
+        <!-- Placeholder for additional head elements -->
     {% endblock %} </head>
 <body>
     <header>
+           <!-- <a href="/" class="logo">
+            <img id="logo" src="{% static 'images/Coolhome.svg' %}" alt="" width="220">
+            <img id="scrolledLogo" src="{% static 'images/coolhomebl.svg' %}" alt="" width="220" style="display: none;">
+        </a> -->
         <nav>
-            <a href="{% url 'listings:listings_list' %}">Listings</a>
-            <a href="{% url 'register' %}">Register</a>
-{#            <a href="{% url 'login' %}">Login</a>#}
-{#            <a href="{% url 'signup' %}">Sign Up</a>#}
-{#            <a href="{% url 'logout' %}">Logout</a>#}
-{#        </nav>#}
+        <ul class="nav-ul">
+            <div class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="{% url 'listings:listings_list' %}">Properties</a></li>
+                <li><a href="#">Rent</a></li>
+                <li><a href="#">Buy</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Faq</a></li>
+                <li><a href="#">Contact</a></li>
+            </div>
+            <div class="navbar-btn" style="display: flex;justify-content: center;align-items: center;gap: 1.6em;">
+{#                <--!<li><a href="{% url 'login' %}">Login</a></li> #}
+{#                <li><a href="{% url 'signup' %}">Sign Up</a></li>#}
+{#                <li><a href="{% url 'logout' %}">Logout</a></li>#}
+                <a href="#"> 
+                    <button>Free Quote</button>
+                </a>
+            </div>
+            <div class="humberger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </ul>
+    </nav>
     </header>
     <main>
         {% block content %}
