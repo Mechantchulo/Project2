@@ -2,7 +2,7 @@
 {% block title %}Sign Up{% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container-sign_up">
     <h1>Sign Up</h1>
     <form method="post" action="{% url 'signup' %}">
         {% csrf_token %}
@@ -10,4 +10,5 @@
         <button type="submit" class="btn btn-primary">Sign Up</button>
     </form>
 </div>
+    
 {% endblock %}

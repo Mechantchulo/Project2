@@ -1513,7 +1513,7 @@ font-family: var(--poppins);
 
   /* FORMS */
 
-form {
+.container-sign_up{
     max-width: 600px;
     margin: auto;
     padding: 2rem;
@@ -1538,6 +1538,8 @@ button {
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
 }
 
 button:hover {
