@@ -32,11 +32,11 @@
  <!-- NAVBAR -->
 
 <header id="myDiv" class="header">
-s        <!-- <a href="/" class="logo">
+        <!-- <a href="/" class="logo">
             <img id="logo" src="{% static 'images/Coolhome.svg' %}" alt="" width="220">
             <img id="scrolledLogo" src="{% static 'images/coolhomebl.svg' %}" alt="" width="220" style="display: none;">
         </a> -->
-    
+    <nav>
         <ul class="nav-ul">
             <div class="nav-links">
                 <li><a href="/">Home</a></li>
@@ -49,9 +49,9 @@ s        <!-- <a href="/" class="logo">
                 <li><a href="#">Contact</a></li>
             </div>
             <div class="navbar-btn" style="display: flex;justify-content: center;align-items: center;gap: 1.6em;">
-                <li><a href="{% url 'login' %}">Login</a></li>
-                <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                <li><a href="{% url 'logout' %}">Logout</a></li>
+{#                <li><a href="{% url 'login' %}">Login</a></li>#}
+{#                <li><a href="{% url 'signup' %}">Sign Up</a></li>#}
+{#                <li><a href="{% url 'logout' %}">Logout</a></li>#}
                 <a href="#">
                     <button>Free Quote</button>
                 </a>
@@ -61,7 +61,7 @@ s        <!-- <a href="/" class="logo">
             </div>
         </ul>
     </nav>
-    </header>
+</header>
     
     <!-- NAVBAR END -->
        
@@ -1768,7 +1768,7 @@ s        <!-- <a href="/" class="logo">
     </div>
 </div>
 <div class="footer-copyright">
-    <p>Copyright &copy; <span id="year"></span> All rights reserved | <span style="color: var(--maroon);">CoolHome</span></p>
+    <p>Copyright &copy; <span id="year"></span> All rights reserved | <span style="color: var(--maroon);">Haven Heights</span></p>
     <div class="footer-social">
         <a href=""><i class="fa-brands fa-facebook-f"></i></a>
         <a href=""><i class="fa-brands fa-twitter"></i></a>
@@ -1784,9 +1784,9 @@ s        <!-- <a href="/" class="logo">
 
 FOOTER END -->
 
-    </div>
-</div>
-<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-jet-fighter-up"></i></button>
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+    <i class="fa-solid fa-jet-fighter-up"></i>
+</button>
 
     <script src="{% static 'style/js/main.js' %}"></script>
 </body>
