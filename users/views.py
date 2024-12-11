@@ -25,7 +25,7 @@ def signup(request):
             return redirect('home')  # Adjust as necessary
     else:
         form = UserCreationForm()
-    return render(request, 'templates/account/signup.html', {'form': form})
+    return render(request, 'account/signup.html', {'form': form})
 
 
 class CustomPasswordChangeView(PasswordChangeView):
