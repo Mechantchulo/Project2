@@ -1,6 +1,10 @@
 # dashboards/views.py
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from listings.models import PropertyListing
+from .models import PropertyInquiry
+from users.models import CustomUser
+
+
 
 def index(request):
     featured_listings = PropertyListing.objects.filter(status='Available').order_by('-created_at')[:5]
@@ -8,7 +12,7 @@ def index(request):
 
 # Existing views for dashboards
 def admin_dashboard(request):
-    # your code for admin_dashboard
+    
     pass
 
 def realtor_dashboard(request):
