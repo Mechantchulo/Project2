@@ -32,8 +32,7 @@
  <!-- NAVBAR -->
 
 <header id="myDiv" class="header">
-    <nav>
-        <!-- <a href="/" class="logo">
+s        <!-- <a href="/" class="logo">
             <img id="logo" src="{% static 'images/Coolhome.svg' %}" alt="" width="220">
             <img id="scrolledLogo" src="{% static 'images/coolhomebl.svg' %}" alt="" width="220" style="display: none;">
         </a> -->
@@ -50,7 +49,9 @@
                 <li><a href="#">Contact</a></li>
             </div>
             <div class="navbar-btn" style="display: flex;justify-content: center;align-items: center;gap: 1.6em;">
-                <li><a href="#">Login</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
                 <a href="#">
                     <button>Free Quote</button>
                 </a>
