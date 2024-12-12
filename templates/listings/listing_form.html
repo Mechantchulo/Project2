@@ -1,13 +1,40 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block title %}{% if form.instance.pk %}Update{% else %}Create{% endif %} Listing{% endblock %}
 
 {% block content %}
 <h2>{% if form.instance.pk %}Update{% else %}Create{% endif %} Listing</h2>
-<!-- Form to create or update a property listing -->
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form.as_p }}  <!-- Display the form fields -->
+    {{ form.non_field_errors }}
+    
+    <!-- General Info Section -->
+    <h3>General Information</h3>
+    {{ form.title }}
+    {{ form.description }}
+    {{ form.price }}
+    {{ form.location }}
+    {{ form.property_type }}
+    {{ form.custom_property_type }}
+    
+    <!-- Details Section -->
+    <h3>Details</h3>
+    {{ form.amenities }}
+    {{ form.num_bedrooms }}
+    {{ form.num_bathrooms }}
+    {{ form.square_footage }}
+
+    <!-- Media Section -->
+    <h3>Media</h3>
+    {{ form.image }}
+    {{ form.video }}
+    {{ form.virtual_tour_url }}
+
+    <!-- Status and Tags -->
+    <h3>Status and Tags</h3>
+    {{ form.status }}
+    {{ form.tags }}
+
     <button type="submit">{% if form.instance.pk %}Update{% else %}Create{% endif %}</button>
 </form>
 {% endblock %}
