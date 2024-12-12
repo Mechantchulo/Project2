@@ -53,9 +53,6 @@ INSTALLED_APPS = [
     #My apps
     'dashboard',
     'listings',
-    'users',
-    'profiles'
-    
     'users.apps.UsersConfig', # Ensure users app is registered
     'profiles.apps.ProfilesConfig',
 
