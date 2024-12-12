@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'dashboard',
     'listings',
     'users',
+    'profiles'
 
 ]
 
