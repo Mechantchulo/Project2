@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Property Search</h2>
+<form method="get">
+    {{ form.as_p }}
+    <button type="submit">Search</button>
+</form>
+
+<h2>Search Results</h2>
+<ul>
+    {% for property in properties %}
+    <li>{{ property.title }} - {{ property.location }} - ${{ property.price }}</li>
+    {% empty %}
+    <li>No properties found.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
