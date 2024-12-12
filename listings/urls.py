@@ -10,4 +10,5 @@ urlpatterns = [
     path('<int:pk>/update/', listing_update, name='listing_update'),
     path('<int:pk>/delete/', listing_delete, name='listing_delete'),
     path('detail/<int:pk>/', listing_detail, name='listing_detail'),
+path('search/', views.property_search, name='property_search'),
 ]
