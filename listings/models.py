@@ -3,6 +3,25 @@ from users.models import CustomUser
 
 # Create your models here.
 class PropertyListing(models.Model):
+    PROPERTY_TYPES = [
+        ('house', 'House'),
+        ('apartment', 'Apartment'),
+        ('condo', 'Condo'),
+        ('townhouse', 'Townhouse'),
+        ('villa', 'Villa'),
+        ('studio', 'Studio'),
+        ('loft', 'Loft'),
+        ('duplex', 'Duplex'),
+        ('penthouse', 'Penthouse'),
+        ('bungalow', 'Bungalow'),
+        ('cabin', 'Cabin'),
+        ('farmhouse', 'Farmhouse'),
+        ('ranch', 'Ranch'),
+        ('mobile_home', 'Mobile Home'),
+        ('commercial', 'Commercial'),
+        ('other', 'Other'),
+    ]
+
     realtor = models.ForeignKey(CustomUser , on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     description = models.TextField()
@@ -10,10 +29,11 @@ class PropertyListing(models.Model):
     location = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    property_type = models.CharField(max_length=50) # e.g., Residential, Commercial amenities = models.CharField(max_length=255) # e.g., Pool, Gym, Parking num_bedrooms = models.IntegerField() num_bathrooms = models.IntegerField() square_footage = models.IntegerField() image = models.ImageField(upload_to='property_images/', blank=True, null=True) video = models.FileField(upload_to='property_videos/', blank=True, null=True) virtual_tour_url = models.URLField(blank=True, null=True) status = models.CharField(max_length=50, default='Available') # e.g., Available, Sold tags = models.CharField(max_length=255, blank=True, null=True) # e.g., "Luxury, Modern"
 
     # Property Type
-    property_type = models.CharField(max_length=50)  # e.g., Residential, Commercial
+    property_type = models.CharField(max_length=100, choices=PROPERTY_TYPES)
+    custom_property_type = models.CharField(max_length=100, blank=True)
+
 
 # Amenities
     amenities = models.CharField(max_length=255, default='Not specified')
