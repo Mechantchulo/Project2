@@ -1,5 +1,5 @@
 // NAVBAR START
-document.querySelector('.humberger').addEventListener('click', function() {
+document.querySelector('.hamburger').addEventListener('click', function() {
     const navLinks = document.querySelector('.nav-links');
     if (navLinks.style.display === 'none') {
         navLinks.style.display = 'block';
