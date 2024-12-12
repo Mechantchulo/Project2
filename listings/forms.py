@@ -7,7 +7,7 @@ class PropertyListingForm(forms.ModelForm):
         fields = [
             'title', 'description', 'price', 'location', 'property_type', 
             'amenities', 'num_bedrooms', 'num_bathrooms', 'square_footage', 
-            'image', 'video', 'virtual_tour_url', 'status', 'tags'
+            'image', 'video', 'virtual_tour_url', 'status', 'tags','sale_status'
         ]
         widgets = {
             'description': forms.Textarea(attrs={'rows': 3}),
