@@ -17,7 +17,7 @@ class PropertyListingSearchForm(forms.Form):
     custom_property_type = forms.CharField(required=False, label='Specify Property Type if "Other"')
     min_price = forms.DecimalField(required=False, min_value=0, label='Min Price')
     max_price = forms.DecimalField(required=False, min_value=0, label='Max Price')
-    bedrooms = forms.IntegerField(required=False, min_value=0, label='Bedrooms')
-    bathrooms = forms.IntegerField(required=False, min_value=0, label='Bathrooms')
+    num_bedrooms = forms.IntegerField(required=False, min_value=0, label='Bedrooms')
+    num_bathrooms = forms.IntegerField(required=False, min_value=0, label='Bathrooms')
 
       
