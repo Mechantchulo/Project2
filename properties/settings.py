@@ -55,6 +55,9 @@ INSTALLED_APPS = [
     'listings',
     'users',
     'profiles'
+    
+    'users.apps.UsersConfig', # Ensure users app is registered
+    'profiles.apps.ProfilesConfig',
 
 ]
 # CRISPY_TEMPLATE_PACK = 'bootstrap5'
