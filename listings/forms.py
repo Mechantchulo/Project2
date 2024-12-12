@@ -9,6 +9,11 @@ class PropertyListingForm(forms.ModelForm):
             'amenities', 'num_bedrooms', 'num_bathrooms', 'square_footage', 
             'image', 'video', 'virtual_tour_url', 'status', 'tags'
         ]
+        widgets = {
+            'description': forms.Textarea(attrs={'rows': 3}),
+            'amenities': forms.Textarea(attrs={'rows': 2}),
+            'tags': forms.Textarea(attrs={'rows': 1}),
+        }
 
 class PropertyListingSearchForm(forms.Form):
     keyword = forms.CharField(required=False, label='Keyword')
