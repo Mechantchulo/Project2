@@ -1,10 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser, Group, Permission 
 
-# Create your models here.
+# Custom user model extending AbstractUser
 class CustomUser (AbstractUser ):
     ROLE_CHOICES = (
-        #('admin', 'Admin'),
         ('realtor', 'Realtor'),
         ('user', 'User '),
     )
