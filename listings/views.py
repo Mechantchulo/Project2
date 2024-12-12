@@ -54,8 +54,8 @@ def property_search(request):
         property_type = form.cleaned_data.get('property_type')
         min_price = form.cleaned_data.get('min_price')
         max_price = form.cleaned_data.get('max_price')
-        bedrooms = form.cleaned_data.get('bedrooms')
-        bathrooms = form.cleaned_data.get('bathrooms')
+        num_bedrooms= form.cleaned_data.get('bedrooms')
+        num_bathrooms = form.cleaned_data.get('bathrooms')
 
         if keyword:
             properties = properties.filter(title__icontains=keyword)
@@ -67,10 +67,10 @@ def property_search(request):
             properties = properties.filter(price__gte=min_price)
         if max_price is not None:
             properties = properties.filter(price__lte=max_price)
-        if bedrooms is not None:
-            properties = properties.filter(bedrooms__gte=bedrooms)
-        if bathrooms is not None:
-            properties = properties.filter(bathrooms__gte=bathrooms)
+        if num_bedrooms is not None:
+            properties = properties.filter(bedrooms__gte=num_bedrooms)
+        if num_bathrooms is not None:
+            properties = properties.filter(bathrooms__gte=num_bathrooms)
 
     context = {
         'form': form,
