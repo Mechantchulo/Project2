@@ -26,6 +26,6 @@ urlpatterns = [
     path('listings/', include('listings.urls')),
     path('users/', include('users.urls')),
     path('dashboard/', include('dashboard.urls')),
-    path('profiles/', include('profiles.urls'
+    path('profiles/', include('profiles.urls'))
 ] + static (settings.MEDIA_URL, document_root =settings.MEDIA_ROOT) #go to settings.py
     #if settings.DEBUG: urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
