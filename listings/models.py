@@ -21,6 +21,12 @@ class PropertyListing(models.Model):
         ('other', 'Other'),
     ]
 
+    SALE_STATUS_CHOICES = [
+        ('sale', 'For Sale'),
+        ('rent', 'For Rent'),
+    ]
+
+
     realtor = models.ForeignKey(CustomUser , on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     description = models.TextField()
@@ -57,3 +63,7 @@ class PropertyListing(models.Model):
 
 # Tags
     tags = models.CharField(max_length=255, blank=True, null=True)  # e.g., "Luxury, Modern"
+    sale_status = models.CharField(max_length=10, choices=SALE_STATUS_CHOICES, default='sale')
+
+    def __str__(self):
+        return self.title
