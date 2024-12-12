@@ -57,8 +57,8 @@ INSTALLED_APPS = [
     'profiles'
 
 ]
-
-CRISPY_TEMPLATE_PACK = 'bootstrap5'  # Set this to the version you are using
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = 'bootstrap5'  # Set to the version currently in use
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend', # Default authentication
