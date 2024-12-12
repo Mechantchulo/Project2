@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'crispy_forms',
+    'crispy_bootstrap4',
 
     # Third-party apps
     'allauth', #Required by django-allauth
@@ -56,6 +57,8 @@ INSTALLED_APPS = [
     'profiles'
 
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'  # Set this to the version you are using
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend', # Default authentication

@@ -1,7 +1,6 @@
 from django.db import models
 from users.models import CustomUser 
 
-# Create your models here.
 class PropertyListing(models.Model):
     PROPERTY_TYPES = [
         ('house', 'House'),
