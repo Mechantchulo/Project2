@@ -13,7 +13,8 @@ class PropertyListingForm(forms.ModelForm):
 class PropertyListingSearchForm(forms.Form):
     keyword = forms.CharField(required=False, label='Keyword')
     location = forms.CharField(required=False, label='Location')
-    property_type = forms.ChoiceField(choices=PropertyListing._meta.get_field('property_type').choices, required=False)
+    property_type = forms.ChoiceField(choices=PropertyListing.PROPERTY_TYPES, required=False)
+    custom_property_type = forms.CharField(required=False, label='Specify Property Type if "Other"')
     min_price = forms.DecimalField(required=False, min_value=0, label='Min Price')
     max_price = forms.DecimalField(required=False, min_value=0, label='Max Price')
     bedrooms = forms.IntegerField(required=False, min_value=0, label='Bedrooms')
