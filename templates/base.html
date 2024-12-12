@@ -19,6 +19,81 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- FONTS AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style> 
+        /* NAVBAR START */ 
+        .header { 
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            height: 70px; 
+            width: 100%; 
+            border-bottom: 0.6px solid var(--color);
+            position: fixed;
+            top: 0; 
+            z-index: 999;
+        } 
+        
+        .header-bg { 
+            background-color: var(--whitesmoke);
+            height: 73px; 
+        }
+        
+        .header-bg .nav-links li a { 
+            color: var(--black);
+        }
+        
+        .header-bg .navbar-btn button { 
+            background: var(--black); 
+            color: var(--color); 
+        } 
+        
+        .header-bg .navbar-btn button:hover { 
+            background: var(--color);
+            color: var(--black); 
+            border: 1px solid var(--black); 
+        } 
+        
+        .header-bg .navbar-btn a 
+        { color: var(--black); 
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+            max-width: 1400px;
+            min-width: 1400px;
+            gap: 2em;
+        } 
+        
+        .nav-ul { display: flex; 
+            justify-content: space-between;
+            align-items: center; 
+            gap: 12em; 
+        }
+        
+        .nav-links { 
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+            gap: 1.6em;
+        } 
+        
+        .hamburger { 
+            color: var(--color);
+            display: none;
+        } 
+        /* NAVBAR END */
+        
+        /* MAIN CONTENT START */ 
+        main { 
+            padding-top: 73px; /* I should adjust based on the height of the navbar */
+        } 
+        
+        /* MAIN CONTENT END */ 
+    </style>
+
 
     {% block head %}
         <!-- Placeholder for additional head elements -->
@@ -52,7 +127,7 @@
                     <button>Free Quote</button>
                 </a>
             </div>
-            <div class="humberger">
+            <div class="hamburger">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </ul>
