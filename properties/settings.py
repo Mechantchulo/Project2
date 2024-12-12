@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'crispy_forms',
-    'crispy_bootstrap4',
+    # 'crispy_forms',
+    # 'crispy_bootstrap4',
 
     # Third-party apps
     'allauth', #Required by django-allauth
@@ -57,8 +57,30 @@ INSTALLED_APPS = [
     'profiles'
 
 ]
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
-CRISPY_TEMPLATE_PACK = 'bootstrap5'  # Set to the version currently in use
+# CRISPY_TEMPLATE_PACK = 'bootstrap5'
+# CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+#
+# CRISPY_TEMPLATE_PACKS = {
+#     'bootstrap5': 'crispy_bootstrap5/bootstrap5',
+# }
+#
+# CRISPY_CLASS_CONVERTERS = {
+#     'bootstrap5': {
+#         'uni_form': 'bootstrap5/uni_form.html',
+#         'uni_form.form': 'bootstrap5/form.html',
+#         'uni_form.formset': 'bootstrap5/formset.html',
+#         'uni_form.formrow': 'bootstrap5/formrow.html',
+#         'uni_form.field': 'bootstrap5/field.html',
+#         'uni_form.singlecheckbox': 'bootstrap5/singlecheckbox.html',
+#         'uni_form.error_list': 'bootstrap5/error_list.html',
+#         'uni_form.help_text': 'bootstrap5/help_text.html',
+#         'uni_form.error_text': 'bootstrap5/error_text.html',
+#         'uni_form.error_summary': 'bootstrap5/error_summary.html',
+#         'uni_form.form_errors': 'bootstrap5/form_errors.html',
+#         'uni_form.preview': 'bootstrap5/preview.html',
+#     }
+# }
+
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend', # Default authentication
