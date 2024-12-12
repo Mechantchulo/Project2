@@ -34,6 +34,9 @@
     <h3>Status and Tags</h3>
     {{ form.status }}
     {{ form.tags }}
+    
+    <!-- Sale Status -->
+    <h3>Sale Status</h3> 
     {{ form.sale_status }}
 
     <button type="submit">{% if form.instance.pk %}Update{% else %}Create{% endif %}</button>
