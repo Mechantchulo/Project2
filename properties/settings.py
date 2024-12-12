@@ -63,6 +63,7 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1  # Required for django-allauth to work
 
+LOGIN_URL = 'users/login/'
 LOGIN_REDIRECT_URL = '/' # Redirects to home after login
 LOGOUT_REDIRECT_URL = '/' # Redirects to home after logout
 ACCOUNT_AUTHENTICATION_METHOD = 'username' # Authentication by username
@@ -120,7 +121,7 @@ DATABASES = {
     'HOST': 'localhost', # Usually 'localhost'
     'PORT': '3306',
     'OPTIONS': {
-        'sql_mode': 'STRICT_TRANS_TABLES',
+        'sql_mode': 'STRICT_TRANS_TABLES', #addresses the database warnings related to MariaDB's Strict Mode and unique constraints with conditions. Enabling Strict Mode ensures data integrity by converting certain warnings into errors, thus preventing potentially problematic data from being inserted into the database.
         }
     }
 }
