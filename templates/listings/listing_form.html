@@ -7,7 +7,7 @@
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.non_field_errors }}
-    
+
     <!-- General Info Section -->
     <h3>General Information</h3>
     {{ form.title }}
@@ -16,7 +16,7 @@
     {{ form.location }}
     {{ form.property_type }}
     {{ form.custom_property_type }}
-    
+
     <!-- Details Section -->
     <h3>Details</h3>
     {{ form.amenities }}
