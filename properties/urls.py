@@ -23,7 +23,8 @@ from django.conf.urls.static import static # Import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='home/index.html'), name='home'), # Home page # Serve index.html at the root URL
-    path('listings/', include(('listings.urls', 'listings'), namespace='listings')),# Include listings app URLs with namespace    path('users/', include('users.urls')),
+    path('listings/', include(('listings.urls', 'listings'), namespace='listings')),# Include listings app URLs with namespace
+    path('users/', include('users.urls')),
     path('dashboard/', include('dashboard.urls')),
     path('profiles/', include('profiles.urls'))
 ] + static (settings.MEDIA_URL, document_root =settings.MEDIA_ROOT) #go to settings.py

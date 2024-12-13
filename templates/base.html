@@ -109,9 +109,9 @@
         <ul class="nav-ul">
             <div class="nav-links">
                 <li><a href="/">Home</a></li>
-                <li><a href="{% url 'listings:listings_list' %}">Properties</a></li>
-                <li><a href="#">Rent</a></li>
-                <li><a href="#">Buy</a></li>
+{#                <li><a href="{% url 'listings:listings_list' %}">Properties</a></li>#}
+                <li><a href="{% url 'listings:listing_filter' sale_status='rent' %}">Rent</a></li>
+                <li><a href="{% url 'listings:listing_filter' sale_status='sale'%}">Buy</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Faq</a></li>
