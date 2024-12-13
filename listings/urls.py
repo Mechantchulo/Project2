@@ -5,7 +5,7 @@ from . import views
 app_name = 'listings' # Define the namespace
 
 urlpatterns = [
-    path('', listing_list, name='listing_list'),
+    path('list', listing_list, name='listing_list'),
     path('create/', listing_create, name='listing_create'),
     path('<int:pk>/update/', listing_update, name='listing_update'),
     path('<int:pk>/delete/', listing_delete, name='listing_delete'),

@@ -65,5 +65,5 @@ class PropertyListing(models.Model):
     tags = models.CharField(max_length=255, blank=True, null=True)  # e.g., "Luxury, Modern"
     sale_status = models.CharField(max_length=10, choices=SALE_STATUS_CHOICES, default='sale')
 
-    def __str__(self):
-        return self.title
+    # def __str__(self):
+    #     return self.title

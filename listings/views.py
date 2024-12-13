@@ -18,7 +18,7 @@ def listing_list(request):
     listings = PropertyListing.objects.all()  # Retrieve all listings from the database
     return render(request, 'listings/listing_list.html', {'listings': listings})  # Render the listings template
 
-# View to filter listings by status
+# View to filter listings by sale status
 def listing_filter(request, sale_status):
     listings = PropertyListing.objects.filter(status=sale_status)
     return render(request, 'listings/listing_list.html', {'listings': listings})
