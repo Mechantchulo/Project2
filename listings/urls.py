@@ -1,15 +1,12 @@
 from django.urls import path
-from .views import listing_create, listing_list, listing_update, listing_delete, listing_detail, listing_filter
-from . import views
-
-app_name = 'listings' # Define the namespace
+from .views import listing_list, listing_create, listing_update, listing_delete, listing_detail, listing_filter, property_search
 
 urlpatterns = [
-    path('list', listing_list, name='listing_list'),
-    path('create/', listing_create, name='listing_create'),
-    path('<int:pk>/update/', listing_update, name='listing_update'),
-    path('<int:pk>/delete/', listing_delete, name='listing_delete'),
-    path('detail/<int:pk>/', listing_detail, name='listing_detail'),
-path('filter/<str:status>/', listing_filter, name='listing_filter'),
-    path('search/', views.property_search, name='property_search'),
+    path('', listing_list, name='listing_list'),  # Home page showing all listings
+    path('create/', listing_create, name='listing_create'),  # Create a new listing
+    path('update/<int:pk>/', listing_update, name='listing_update'),  # Update an existing listing
+    path('delete/<int:pk>/', listing_delete, name='listing_delete'),  # Delete a listing
+    path('<int:pk>/', listing_detail, name='listing_detail'),  # View details of a listing
+    path('filter/<str:sale_status>/', listing_filter, name='listing_filter'),  # Filter listings by sale status
+    path('search/', property_search, name='property_search'),  # Search listings
 ]
