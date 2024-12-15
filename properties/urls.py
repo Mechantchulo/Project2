@@ -27,6 +27,6 @@ urlpatterns = [
     path('users/', include('users.urls')),
     path('dashboard/', include('dashboard.urls')),
     path('profiles/', include('profiles.urls')),
-    path('contact/', contact_view, name='contact'), # Contact form URL
+    path('contact/',include('pages.urls')), # Contact form URL
 ] + static (settings.MEDIA_URL, document_root =settings.MEDIA_ROOT) #go to settings.py
     #if settings.DEBUG: urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
