@@ -49,3 +49,15 @@ def contact_view(request):
     
 #     # Render the contact form
 #     return render(request, 'contact.html', {'form': form})
+
+# def contact_view(request):
+#     if request.method == 'POST':
+#         form = ContactForm(request.POST)  # Create a form instance with the submitted data
+#         if form.is_valid():  # Check if the form is valid
+#             # Process the data (e.g., send an email, save to database)
+#             # For now, we'll just redirect to a success page
+#             return redirect('success')  # Redirect to a success page after submission
+#     else:
+#         form = ContactForm()  # Create an empty form instance for GET requests
+
+#     return render(request, 'contact.html', {'form': form})  # Render the contact template with the form
