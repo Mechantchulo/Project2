@@ -1,0 +1,41 @@
+/* contact.css */
+
+/* General styles for the contact section */
+.contact-section {
+    padding: 50px 0;
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.contact-section h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333; /* Dark text for readability */
+}
+
+.contact-section .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-section .form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Light border */
+ 
+}
+
+.contact-section .btn {
+    background-color: #007bff; /* Primary button color */
+    color: white; /* Button text color */
+}
+
+.contact-info {
+    margin-top: 40px;
+}
+
+.contact-info h3 {
+    margin-bottom: 15px;
+}
+
+.map {
+    margin-top: 40px;
+}
+
