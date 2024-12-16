@@ -465,4 +465,40 @@ font-family: var(--poppins);
           height: 100%; 
   }
 
+   
+   /* Responsive styles */
+    @media (max-width: 982px) {
+        .blog-box {
+            flex: 1 0 40%;
+            
+        }
+        .blog-box-cont h2 {
+            font-size: 1.3rem;
+            max-width: 94%;
+        }
+    
+    }
+    
+    
+    @media (max-width: 760px) {
+        .blog-box {
+            flex: 1 0 40%;
+            
+        }
+    
+    }
+    
+    @media (max-width: 635px) {
+        .blog-box {
+            flex: 1 0 50%;
+            
+        }
+        .blog-box-cont h2 {
+            font-size: var(--h2);
+        }
+    
+    }
+    
+    /* BLOG END */
+    
 /*<!-- BLOG END -->*/
