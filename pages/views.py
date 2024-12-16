@@ -36,6 +36,19 @@ def contact_view(request):
         form = ContactForm()  # Create an empty form instance for GET requests
 
     return render(request, 'contact.html', {'form': form})  # Render the contact template with the form
+
+
+
+# users/views.py
+
+from django.shortcuts import render
+
+def about_view(request):
+    return render(request, 'about.html')  # Render the About Us page
+
+
+
+
 # from django.core.mail import send_mail
 # # from django.conf import settings
 
