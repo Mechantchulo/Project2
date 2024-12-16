@@ -1,48 +1,245 @@
-/* about.css */
 
-/* General styles for the about section */
-.about-description {
-    font-size: 1.2em; /* Font size for the description */
-    margin-bottom: 30px; /* Space below the description */
-    color: #555; /* Darker text for readability */
+/* TEAM */
+.team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 5em;
+    margin-top: 4em;
 }
 
 .team-container {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow wrapping of team members */
-    justify-content: space-around; /* Space out team members */
-    margin-bottom: 30px; /* Space below the team section */
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin: 0 auto;
+min-width: 90%;
+max-width: 90%;
 }
 
-.team-member {
-    text-align: center; /* Center align text for team members */
-    margin: 15px; /* Space around each team member */
-    width: 200px; /* Fixed width for team members */
+.team-container h1 {
+    font-family: var(--lato);
+    font-size: var(--h22);
 }
 
-.team-member img {
-    width: 100%; /* Responsive image */
-    border-radius: 50%; /* Circular images */
+.team-wraper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     flex-wrap: wrap;
+    gap: 2em;
+    width: 100%;
+    margin-top: 4em;
+}
+
+.team-single-wraper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border);
+    border: 4px solid var(--maroon);
+    flex: 1 0 20%;
+}
+
+.team-single-wraper img {
+    width: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+    cursor: pointer;
+    box-shadow: var(--shadow-1);
+}   
+
+.team-single-wraper:hover img {
+    transform: scale(1.1);
+}   
+
+.teams-social {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.teams-social i {
+    color: var(--color);
+    font-size: 20px;
+    cursor: pointer;
+    background-color: var(--black);
+    padding: 2px 4px;
+    border-radius: 5px;
+}
+
+.teams-social i:hover {
+    color: var(--maroon);
+    background-color: var(--black);
+}
+
+.teams-cont {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: rgb(94, 93, 93);
+opacity: 0.9;
+color: var(--color);
+width: 90%;
+border-radius: var(--border);
+padding: 2px 0;
+}
+
+.teams-cont h2 {
+    font-family: var(--lato);
+    padding-left: 10px;
+}
+
+.teams-cont p {
+    font-family: var(--poppins);
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+
+/* TESTIMONIALS */
+.testimonials {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+width: 100%;
+background-color: var(--whitesmoke);
+font-family: var(--lato);
 }
 
 .testimonials-container {
-    margin-top: 20px; /* Space above testimonials section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    min-width: 90%;
+    max-width: 90%;
+    margin-top: 4em;
+    margin-bottom: 4em;
 }
 
-.testimonial {
-    background-color: #f9f9f9; /* Light background for testimonials */
-    padding: 15px; /* Padding inside testimonial boxes */
-    border-radius: 5px; /* Rounded corners for testimonials */
-    margin-bottom: 15px; /* Space below each testimonial */
+.testimonials-wraper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 4em 0 2em;
+    flex-wrap: wrap;
 }
 
-.testimonial h5 {
-    text-align: right; /* Align customer name to the right */
-    font-style: italic; /* Italic style for customer names */
-    color: #333; /* Darker color for customer names */
+.testimonials-cont {
+    width: 100%;
+    text-align: left !important;
+    line-height: 46px;
 }
 
-h3 {
-    margin-top: 40px; /* Space above section headings */
-    color: #333; /* Dark color for headings */
+.testimonials-cont span{
+font-size: 1.4rem;
+font-family: var(--poppins);
 }
+
+.testimonials-cont h2 {
+    font-family: var(--lato);
+    font-size: var(--h23);
+    font-weight: 900 !important;
+}
+
+.testimonial-box {
+    cursor: pointer;
+    box-shadow: var(--shadow-1);
+    width: 40%;
+    padding: 20px;
+    border-radius: var(--border);
+    flex: 1 0 30%;
+}
+
+.testimonial-box p {
+    padding-top: 0.6em;
+    padding-bottom: 0.4em;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(95, 95, 95);
+}
+
+.testimonial-box h4 {
+    font-size: var(--h5);
+    padding-top: 0.8em;
+}
+
+.rank-one h3 {
+    font-weight: 700;
+    font-size: var(--h2);
+}
+
+.star {
+    line-height: 36px;
+}
+
+.test-star {
+    display: flex;
+    justify-content: space-between;
+}
+.star {
+    color: rgb(255, 204, 0);
+}
+
+/* Responsive styles */
+
+    /* TESTIMONIAL START */
+    @media (max-width: 1154px) {
+        .rank-one h3 {
+            font-size: var(--h3);
+        }
+        .testimonial-box p {
+            font-size: 14px;
+        }
+        }
+        
+        @media (max-width: 982px) {
+            .testimonial-box {
+                flex: 1 0 40%;
+            }
+            .team-single-wraper {
+                flex: 1 0 40%;
+            }
+        }
+        
+        @media (max-width: 630px) {
+            .testimonial-box {
+                flex: 1 0 50%;
+            }
+        
+        }
+        
+        /* TESTIMONIAL END */
+        /* TEAM START*/
+        @media (max-width: 1128px) {
+            .team-single-wraper {
+                flex: 1 0 40%;
+            }
+            .teams-cont {
+            padding: 16px 0;
+            }
+        }
+        
+        @media (max-width: 558px) {
+            .team-single-wraper {
+                flex: 1 0 50%;
+            }
+        }
+        
+        /* TEAM END */
+        
