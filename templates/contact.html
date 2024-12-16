@@ -43,7 +43,8 @@
                     <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary mt-3">Send Message</button>
-            </form>
+                <button type="reset" class="btn btn-danger">Reset</button> <!-- Reset button to clear the form -->
+              </form>
 
             <div class="contact-info mt-5">
                 <h3>Contact Information</h3>
@@ -59,6 +60,11 @@
         </div>
     </section>
     <!-- CONTACT US SECTION END -->
+    <!-- <script>
+      function showSpinner() {
+          document.getElementById('spinner').style.display = 'block'; // Show spinner on form submission
+      }
+      </script> -->
 
 {% endblock %}
 

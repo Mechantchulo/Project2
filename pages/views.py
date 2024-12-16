@@ -1,7 +1,30 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import ContactForm  # Assuming you will create a form class
+from django.core.mail import send_mail
 
+# def contact_view(request):
+#     if request.method == 'POST':
+#         form = ContactForm(request.POST)
+#         if form.is_valid():
+#             # Extract data from the form
+#             name = form.cleaned_data['name']
+#             email = form.cleaned_data['email']
+#             message = form.cleaned_data['message']
+#
+#             # Send email
+#             send_mail(
+#                 f'Message from {name}',  # Subject
+#                 message,  # Message body
+#                 email,  # From email
+#                 ['njogudavidmark@gmail.com'],  # To email (change to your email)
+#                 fail_silently=False,
+#             )
+#             return redirect('success')
+#     else:
+#         form = ContactForm()  # Create an empty form instance for GET requests
+#
+#     return render(request, 'contact.html', {'form': form})
 def contact_view(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)  # Create a form instance with the submitted data
@@ -14,7 +37,7 @@ def contact_view(request):
 
     return render(request, 'contact.html', {'form': form})  # Render the contact template with the form
 # from django.core.mail import send_mail
-# from django.conf import settings
+# # from django.conf import settings
 
 
 # # Create a view to handle the contact form submission
