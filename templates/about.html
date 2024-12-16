@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}About Us{% endblock %}
+
+{% block head %}
+    {{ block.super }}  {# This includes the base head content #}
+    <link rel="stylesheet" href="{% static 'style/css/about.css' %}"> {# Link to the about-specific CSS #}
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">About Us</h2>
+        <p class="about-description">
+            Welcome to Haven Heights! We are dedicated to helping you find your dream home. Our team of experienced real estate agents is here to guide you through every step of the process.
+        </p>
+
+        <h3 class="mt-4">Our Team</h3>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="{% static 'images/team1.jpg' %}" alt="Team Member 1">
+                <h4>Francis Njuguna</h4>
+                <p>CEO & Founder</p>
+            </div>
+            <div class="team-member">
+                <img src="{% static 'images/team2.jpg' %}" alt="Team Member 2">
+                <h4>Emily Johnson</h4>
+                <p>Estate Agent</p>
+            </div>
+            <div class="team-member">
+                <img src="{% static 'images/team3.jpg' %}" alt="Team Member 3">
+                <h4>John Doe</h4>
+                <p>Estate Agent</p>
+            </div>
+            <div class="team-member">
+                <img src="{% static 'images/team4.jpg' %}" alt="Team Member 4">
+                <h4>Alex Smith</h4>
+                <p>Marketing Specialist</p>
+            </div>
+        </div>
+
+        <h3 class="mt-4">What Our Customers Say</h3>
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <p>"Great services! The team was very helpful in finding my new home."</p>
+                <h5>- Customer Name</h5>
+            </div>
+            <div class="testimonial">
+                <p>"I had a wonderful experience with Haven Heights. Highly recommend!"</p>
+                <h5>- Customer Name</h5>
+            </div>
+        </div>
+
+        <h3 class="mt-4">Contact Us</h3>
+        <p>If you have any questions, feel free to reach out to us at <a href="mailto:help@example.com">help@example.com</a>.</p>
+    </div>
+{% endblock %}

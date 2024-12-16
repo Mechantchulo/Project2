@@ -1,0 +1,48 @@
+/* about.css */
+
+/* General styles for the about section */
+.about-description {
+    font-size: 1.2em; /* Font size for the description */
+    margin-bottom: 30px; /* Space below the description */
+    color: #555; /* Darker text for readability */
+}
+
+.team-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping of team members */
+    justify-content: space-around; /* Space out team members */
+    margin-bottom: 30px; /* Space below the team section */
+}
+
+.team-member {
+    text-align: center; /* Center align text for team members */
+    margin: 15px; /* Space around each team member */
+    width: 200px; /* Fixed width for team members */
+}
+
+.team-member img {
+    width: 100%; /* Responsive image */
+    border-radius: 50%; /* Circular images */
+}
+
+.testimonials-container {
+    margin-top: 20px; /* Space above testimonials section */
+}
+
+.testimonial {
+    background-color: #f9f9f9; /* Light background for testimonials */
+    padding: 15px; /* Padding inside testimonial boxes */
+    border-radius: 5px; /* Rounded corners for testimonials */
+    margin-bottom: 15px; /* Space below each testimonial */
+}
+
+.testimonial h5 {
+    text-align: right; /* Align customer name to the right */
+    font-style: italic; /* Italic style for customer names */
+    color: #333; /* Darker color for customer names */
+}
+
+h3 {
+    margin-top: 40px; /* Space above section headings */
+    color: #333; /* Dark color for headings */
+}
