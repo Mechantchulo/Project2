@@ -47,8 +47,10 @@ def about_view(request):
     return render(request, 'about.html')  # Render the About Us page
 
 def blog_view(request):
-    return render(request, 'blog.html') #Rendder the blog page
+    return render(request, 'blog.html') #Render the blog page
 
+def faq_view(request):
+    return render(request, 'faq.html')
 
 
 
