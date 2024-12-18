@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     #My apps
     'dashboard',
     'listings',
+    'bookings',
     'users.apps.UsersConfig', # Ensure users app is registered
     'profiles.apps.ProfilesConfig',
 
