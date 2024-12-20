@@ -147,7 +147,7 @@ DATABASES = {
     'ENGINE': 'django.db.backends.mysql',
     'NAME': 'haven_heights',
     'USER':'root',
-    'PASSWORD': '',
+    'PASSWORD': 'alberteinstein1234',
     'HOST': 'localhost', # Usually 'localhost'
     'PORT': '3306',
     'OPTIONS': {

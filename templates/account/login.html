@@ -7,13 +7,43 @@
     <h2 class="text-center mb-4">Login</h2>
     <form method="post" class="needs-validation" novalidate>
         {% csrf_token %}
-        {{ form.non_field_errors }}
-        <div class="form-group">
-            {{ form.login.label_tag }} {{ form.login }}
+        
+        <!-- Display form non-field errors -->
+        <div class="alert alert-danger" role="alert">
+            {% for error in form.non_field_errors %}
+                <p>{{ error }}</p>
+            {% endfor %}
         </div>
+
+        <!-- Login input field -->
         <div class="form-group">
-            {{ form.password.label_tag }} {{ form.password }}
+            {{ form.login.label_tag }} 
+            {{ form.login }}
+            {% if form.login.errors %}
+                <div class="text-danger">
+                    {% for error in form.login.errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
         </div>
+
+        <!-- Password input field -->
+        <div class="form-group">
+            {{ form.password.label_tag }} 
+            {{ form.password }}
+            {% if form.password.errors %}
+                <div class="text-danger">
+                    {% for error in form.password.errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Hidden input field to carry 'next' if it exists -->
+        <input type="hidden" name="next" value="{{ request.GET.next }}">
+
         <button type="submit" class="btn btn-primary mt-3">Login</button>
     </form>
 </div>
